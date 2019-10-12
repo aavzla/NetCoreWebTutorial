@@ -1,0 +1,22 @@
+﻿@page
+@*This helps to identify the page as a razor page*@
+
+@*We can not make a comment line next to any arrobas at the page. it will not compile.*@
+
+@*The next two lines allow to have access to the config file, so you can get a value.*@
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+
+@*This is the model attached to the view*@
+@model NetCoreWebTutorial.Pages.IndexModel
+
+@{
+	//This block will allow manage code.
+	ViewData["Title"] = "Index";
+	int nbr = 2 + 2;
+}
+
+<h2>Hello you! This is coming from the index Razor page.</h2>
+<p>This page is loaded at @DateTime.Now . And the number shown is @nbr</p>
+<p>The message from the config file is : @Configuration["Message"]</p>

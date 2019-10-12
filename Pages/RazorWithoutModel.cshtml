@@ -1,0 +1,9 @@
+﻿@page
+<!--The razor page allow the app to identify it as a razor page. And should be always the first line at the file.
+	Also, we can not add the arrobas sign in a comment line, because the system will detected and may cause behavior problems.-->
+<h1>Hi you!</h1>
+
+<p>This paragraph is at the Razor without a model page.</p>
+<!--Because this is a single cshtml file without the .cs file attached. The Intelisense does not work.
+	See line with the datetime and also the page directive.-->
+<p>This page is loaded at @DateTime.Now</p>
